@@ -1,0 +1,71 @@
+module.exports = {
+  siteMetadata: {
+    title: "Buddha Gurung",
+    description: "Blog by Buddha Gurung",
+    author: "@buddhagrg_",
+    social: {
+      github: "https://github.com/buddhagrg",
+      linkedin: "https://www.linkedin.com/in/buddhagrg/",
+      twitter: "https://twitter.com/buddhagrg_"
+    }
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/content`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: { sh: "bash", js: "javascript" },
+              showLineNumbers: true,
+            }
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `5`,
+              elements: [`h2`, `h3`, `h4`, `h5`],
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 730,
+              linkImagesToOriginal: false
+            }
+          }
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        display: "standalone",
+        icon: "src/images/favicon.png",
+        crossOrigin: `use-credentials`,
+      },
+    },
+  ]
+}
