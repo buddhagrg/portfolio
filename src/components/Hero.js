@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   const data = useStaticQuery(
@@ -38,7 +38,6 @@ export default function Hero() {
         <div className="hero-social">
           <a href={social && social.github} aria-label="Github" className="mr-4"><FaGithub size="25" /></a>
           <a href={social && social.linkedin} aria-label="LinkedIn" className="mr-4"><FaLinkedin size="25" /></a>
-          <a href={social && social.twitter} aria-label="Twitter"><FaTwitter size="25" /></a>
         </div>
       </div>
     </div>
