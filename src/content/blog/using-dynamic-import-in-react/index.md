@@ -1,7 +1,7 @@
 ---
 category: "blog"
 title: "Using dynamic import in React"
-date: "2021-09-05"
+date: "2021-08-29"
 published: true
 tags: "React,Dynamic Import"
 ---
