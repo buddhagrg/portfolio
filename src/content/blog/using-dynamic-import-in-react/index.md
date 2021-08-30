@@ -12,7 +12,7 @@ I have been using [ReactJS](https://reactjs.org/) for a while now. As I go on wo
 
 - [Splitting the chunks with Webpack](#splitting-the-chunks-with-webpack)
 - [Route level splitting](#route-level-splitting)
-- [Component level splitting](#component-level-splitting)
+- [Code level splitting](#code-level-splitting)
 
 <br>
 <br>
@@ -53,8 +53,8 @@ This example uses Suspense and lazy functionalities from react. More information
 <br>
 <br>
 
-## Component level splitting
-Suppose we have a _User_ route that has a table containing all the list of user information like User id, First Name, Last Name, Logged in date, Active or inactive status and Action. The _action_ table column contains various actions to delete, edit, view user history, etc. If we want to view user history, we will click on the _View History_ button that shows a popup-modal component that will contain more information on user history. At this instance, we make a separate _UserHistory_ component and import in the _User_ route like this
+## Code level splitting
+Suppose we have a _User_ route that has a table containing all the list of user information like User id, First Name, Last Name, Logged in date, Active or inactive status and Action. The _action_ table column contains various actions to delete, edit, view user history, etc. If we want to view user history, we will click on the _View History_ button that shows a popup-modal module that will contain more information on user history. At this instance, we make a separate _UserHistory_ module and import in the _User_ route like this
 ```jsx
 import React from 'react'
 import UserHistory from './History'
@@ -64,17 +64,22 @@ export default function User(props){
     )
 }
 ```
-This means the _UserHistory_ component will be imported before we even click on the _View History_ button. But do you think this is good? I was thinking what if we could import the _UserHistory_ component only when the user clicks on that button, that could be awesome. Here is where the _**dynamic import**_ comes into play. So this is one of the ways how we could do this through the use of dynamic import features.
+This means the _UserHistory_ module will be imported before we even click on the _View History_ button. But do you think this is good? I was thinking what if we could import the _UserHistory_ module only when the user clicks on that button, that could be awesome. Here is where the _**dynamic import**_ comes into play. So this is one of the ways how we could do this through the use of dynamic import features.
 ```jsx
-import React from 'react'
+import React,{ useState } from 'react'
 export default function User(props){
+    const [values, setValues] = useState({
+        loading: false,
+        UserHistory: null,
+        userHistoryModal: false
+    });
     const viewUserHistory = async (event) => {
         event.preventDefault();
         if (!values.UserHistory) {
             try {
                 setValues(values => ({ ...values, loading: true }));
-                let component = await import(/*webpackChunkName:'UserHistory'*/ './History');
-                setValues(values => ({ ...values, loading: false, UserHistory: component.default }));
+                let module = await import(/*webpackChunkName:'UserHistory'*/ './History');
+                setValues(values => ({ ...values, loading: false, UserHistory: module.default }));
             } catch (error) {
                 setValues(values => ({ ...values, loading: false }));
             }
@@ -94,9 +99,9 @@ export default function User(props){
     )
 }
 ```
-The _viewUserHistory_ code snippet checks if the state contains _UserHistory_ component or not, if not then only it will import it dynamically. We can set some kind of loading indicator through _loading: true_ so that the user knows something is getting imported.<br>
+The _viewUserHistory_ code snippet checks if the state contains _UserHistory_ module or not, if not then only it will import it dynamically. We can set some kind of loading indicator through _loading: true_ so that the user knows some action is being carried out.<br>
 
-We can do this similar stuff using React's Suspense and lazy functionalities, but in my case, dynamic import is favoured. So there is nothing hard and force rule, it depends on the developer experience and the structure of the project.
+We can do this stuff using React's Suspense and lazy functionalities, but in my case, dynamic import is favoured. So there is nothing hard and force rule, it depends on the developer experience and the structure of the project.
 <br>
 <br>
 
