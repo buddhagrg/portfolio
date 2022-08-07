@@ -1,4 +1,4 @@
 ---
-category: "project index"
+category: "projects index"
 title: "Projects"
 ---

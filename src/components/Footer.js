@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 export default function Footer() {
+    const data = useStaticQuery(graphql`
+        query{
+            site{
+                siteMetadata{
+                    author
+                }
+            }
+        }
+    `);
+
     return (
-        <footer className="footer-section-wrapper">
-            <p className="footer-text">
-                © {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.com">Gatsby</a>
-            </p>
+        <footer>
+            &#169; {data.site.siteMetadata.author}
         </footer>
     );
 }

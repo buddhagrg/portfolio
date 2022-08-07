@@ -1,16 +1,16 @@
-import React from "react"
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Layout from '../components/Layout';
-import Hero from '../components/Hero';
-import Projects from '../components/Projects';
-import SEO from '../components/SEO';
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import RecentBlogPosts from "../components/RecentBlogPosts";
+import SEO from "../components/SEO";
 
-export default function Home() {
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <Hero />
-      <Projects />
-    </Layout>
-  );
+export default function App() {
+    return (
+        <Layout >
+            <SEO title="Home" />
+            <Hero />
+            <RecentBlogPosts />
+        </Layout >
+    );
 }

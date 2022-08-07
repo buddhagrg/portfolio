@@ -8,9 +8,8 @@ const SEO = ({ description, meta, lang, title }) => {
             query{
                 site{
                     siteMetadata{
-                        title
-                        description
                         author
+                        description
                     }
                 }
             }
@@ -25,7 +24,7 @@ const SEO = ({ description, meta, lang, title }) => {
                 lang,
             }}
             title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            titleTemplate={`%s | ${site.siteMetadata.author}`}
             meta={[
                 {
                     name: `description`,
@@ -52,7 +51,7 @@ SEO.defaultProps = {
     lang: `en`,
     meta: [],
     description: ``,
-    title: `Title`
+    title: ``
 }
 
 export default SEO;

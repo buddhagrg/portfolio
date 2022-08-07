@@ -1,34 +1,25 @@
-import React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
+import React from "react";
+import { Link } from "gatsby";
+// import { MdOutlineDarkMode } from "react-icons/md";
 
 export default function Header() {
-    const data = useStaticQuery(graphql`
-    query {
-        avatar: file(relativePath: {eq: "profile-pic.jpg"}) {
-          childImageSharp {
-            fixed(width: 70, height: 70) {
-                  ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `);
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <h3><Link className="navbar-brand" to="/">Buddha Gurung</Link></h3>
 
-    const avatar = data.avatar.childImageSharp.fixed;
-
-    return (
-        <div className="section-parent-wrapper">
-            <header className="header-section-wrapper">
-                <Link to="/">
-                    <Image fixed={avatar} imgStyle={{ borderRadius: `50%`, display: 'inline' }} />
-                </Link>
-                <ul className="nav-ul">
-                    <li>
-                        <Link to="/blog" activeClassName="active-nav-link" className="nav-link">Blog</Link>
-                    </li>
-                </ul>
-            </header>
-        </div >
-    );
+        <div className="d-flex">
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item">
+              <Link to="/blog" className="nav-link">Blog</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/projects" className="nav-link">Projects</Link>
+            </li>
+          </ul>
+          {/* <MdOutlineDarkMode style={{ color: "white" }} size="30" /> */}
+        </div>
+      </div>
+    </nav>
+  );
 }

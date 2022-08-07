@@ -7,7 +7,7 @@ tags: "React,Dynamic Import"
 ---
 <br>
 
-I have been using [ReactJS](https://reactjs.org/) for a while now. As I go on working on the projects, the large size of javascript bundles makes me realize to learn different ways to reduce the issues of large bundle size at least to some extent. In this article, I am sharing some of the ways that I have learned during my development phases.
+I have been using [ReactJS](https://reactjs.org/) for a while now. As I go on working on the projects, the large size of javascript bundles makes me realize to learn different ways to reduce the issues of large bundle size at least to some extent. In this blog post, I am sharing some of the ways that I have learned during my development phases.
 <br>
 
 - [Splitting the chunks with Webpack](#splitting-the-chunks-with-webpack)
@@ -105,7 +105,7 @@ We can do this stuff using React's Suspense and lazy functionalities, but in my 
 <br>
 <br>
 
-_Any feedbacks are appreciated. Thank you for taking your invaluable time to go through the article._
+_Any feedbacks are appreciated. Thank you for taking your invaluable time to go through the post._
 <br>
 <br>
 

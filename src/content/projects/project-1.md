@@ -2,5 +2,7 @@
 category: "project"
 title: "Gatsby Blog"
 subtitle: "A simple blog based on Gatsby framework"
-githubLink: "https://github.com/buddhagrg/gatsby-blog"
+date: "2021-02-10"
+code: "https://github.com/buddhagrg/gatsby-blog"
+demo: "https://simple-gatsbyjs-blog.netlify.app/"
 ---

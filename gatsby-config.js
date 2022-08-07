@@ -1,19 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "Buddha Gurung",
+    author: "Buddha Gurung",
     description: "Blog by Buddha Gurung",
-    author: "@buddhagrg_",
     social: {
       github: "https://github.com/buddhagrg",
-      linkedin: "https://www.linkedin.com/in/buddhagrg/",
-      twitter: "https://twitter.com/buddhagrg_"
+      linkedin: "https://www.linkedin.com/in/buddhagrg/"
     }
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "posts",
+        name: "data",
         path: `${__dirname}/src/content`
       }
     },
@@ -57,14 +55,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "GatsbyJS",
-        short_name: "GatsbyJS",
+        name: "Buddha Gurung",
+        short_name: "Buddha Gurung",
+        description: "Portfolio of Buddha Gurung",
         start_url: "/",
         background_color: "#6b37bf",
         theme_color: "#6b37bf",
         display: "standalone",
-        icon: "src/images/favicon.png",
-        crossOrigin: `use-credentials`,
+        icon: "src/images/favicon.png"
       },
     },
   ]

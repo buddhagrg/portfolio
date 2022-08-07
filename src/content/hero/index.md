@@ -1,5 +1,5 @@
 ---
 category: "hero index"
-intro: "Hi, I am Buddha Gurung"
-content: "I have been working as a ReactJs Developer. Building and learning new skills as a developer has always been a very fun part."
+title: "Hi, I am Buddha"
+content: "I am a software engineer from Nepal. Currently, I am working as a ReactJs Developer."
 ---
