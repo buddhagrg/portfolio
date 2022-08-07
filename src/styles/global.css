@@ -1,5 +1,5 @@
 :root {
-    --maxWidth: 730px !important;
+    --maxWidth: 850px !important;
 }
 
 .nav-link {
@@ -92,6 +92,12 @@ footer {
     width: 100% !important;
     margin: 0px auto !important;
     margin-top: 70px !important;
+}
+
+.navbar-wrapper {
+    max-width: var(--maxWidth);
+    width: 100% !important;
+    margin: 0px auto !important;
 }
 
 .tag-badge {
