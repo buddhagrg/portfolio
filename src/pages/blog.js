@@ -23,7 +23,7 @@ export default function Blog() {
                             title
                             date(formatString: "MMMM DD, YYYY")
                         }
-                        excerpt(pruneLength: 160)
+                        excerpt(pruneLength: 80)
                         fields {
                             slug
                         }
@@ -40,27 +40,23 @@ export default function Blog() {
         <Layout>
             <SEO title={seoTitle} />
             <section>
-                <ul className="blog-post-ul">
-                    {
-                        blogs && blogs.length > 0 &&
-                        <ul className="blog-post-ul">
-                            {
-                                blogs.map(({ node }) => (
-                                    <li key={node.id} className="blog-post-list">
-                                        <h5>
-                                            <Link
-                                                to={node.fields.slug}
-                                                className="blog-post-link"
-                                            >{node.frontmatter.title}</Link>
-                                        </h5>
-                                        <h6 className="text-muted">{node.frontmatter.date}</h6>
-                                        <p className="post-excerpt">{node.excerpt}</p>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    }
-                </ul>
+                {
+                    blogs && blogs.length > 0 &&
+                    blogs.map(({ node }) => (
+                        <Link
+                            key={node.id}
+                            to={node.fields.slug}
+                            className="blog-post-link"
+                        >
+                            <div className="blog-post-list">
+                                <h5 className="blog-post-heading">{node.frontmatter.title}</h5>
+                                <span className="text-muted">{node.frontmatter.date}</span>
+                                <p className="post-excerpt">{node.excerpt}</p>
+                            </div>
+                        </Link>
+
+                    ))
+                }
             </section>
         </Layout>
     );

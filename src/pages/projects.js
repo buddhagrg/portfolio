@@ -42,18 +42,18 @@ export default function Projects() {
                     <div className="row">
                         {
                             projects.map(({ node }) => (
-                                <div key={node.id} className="col col-sm-12 col-lg-6">
+                                <div key={node.id} className="col col-sm-12 col-lg-4">
                                     <div className="card h-100">
                                         <div className="card-body">
                                             <h5>{node.frontmatter.title}</h5>
                                             <p>{node.frontmatter.subtitle}</p>
                                             <div className="d-flex">
-                                                <a href={node.frontmatter.code} target="_blank">Code</a>
+                                                <a className="anchor-link" href={node.frontmatter.code} target="_blank">Code</a>
                                                 {
                                                     node.frontmatter.demo &&
                                                     <div>
                                                         <span>/</span>
-                                                        <a href={node.frontmatter.demo} target="_blank">Demo</a>
+                                                        <a href={node.frontmatter.demo} className="anchor-link" target="_blank">Demo</a>
                                                     </div>
                                                 }
                                             </div>

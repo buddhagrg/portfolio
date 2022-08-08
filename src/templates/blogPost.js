@@ -18,12 +18,12 @@ export default function BlogPost({ data, pageContext }) {
         <h6 className="text-muted">{post.frontmatter.date}</h6>
         <Tag tags={post.frontmatter.tags} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} className="html-post-description" />
-        <div>
+        <div className="node-link-style">
           {previous && (
-            <Link className="link-style previous-node" to={previous.fields.slug} rel="previous">←{previous.frontmatter.title}</Link>
+            <Link to={previous.fields.slug} rel="previous">←{previous.frontmatter.title}</Link>
           )}
           {next && (
-            <Link className="link-style next-node" to={next.fields.slug} rel="next">{next.frontmatter.title}→</Link>
+            <Link to={next.fields.slug} rel="next">{next.frontmatter.title}→</Link>
           )}
         </div>
       </section>

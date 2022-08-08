@@ -17,7 +17,7 @@ export default function RecentBlogPosts() {
                             title
                             date(formatString: "MMMM DD, YYYY")
                         }
-                        excerpt(pruneLength: 160)
+                        excerpt(pruneLength: 80)
                         fields {
                             slug
                         }
@@ -33,26 +33,42 @@ export default function RecentBlogPosts() {
     return (
         <section className="recent-blog-post-wrapper">
             <h6>{heading}</h6>
-            <ul className="blog-post-ul">
+            {
+                blogPosts && blogPosts.length > 0 &&
+                blogPosts.map(({ node }) => (
+                    <Link
+                        key={node.id}
+                        to={node.fields.slug}
+                        className="blog-post-link"
+                    >
+                        <div className="blog-post-list">
+                            <h5 className="blog-post-heading">{node.frontmatter.title}</h5>
+                            <span className="text-muted">{node.frontmatter.date}</span>
+                            <p className="post-excerpt">{node.excerpt}</p>
+                        </div>
+                    </Link>
+
+                ))
+            }
+
+
+            {/* <ul className="blog-post-ul">
                 {
                     blogPosts && blogPosts.length > 0 &&
                     blogPosts.map(({ node }) => (
                         <li key={node.id} className="blog-post-list">
-                            <h5>
-                                <Link
-                                    to={node.fields.slug}
-                                    className="blog-post-link"
-                                >{node.frontmatter.title}</Link>
-                            </h5>
-                            <h6 className="text-muted">{node.frontmatter.date}</h6>
+                            <Link
+                                to={node.fields.slug}
+                                className="blog-post-link"
+                            >
+                                <h5 className="blog-post-heading">{node.frontmatter.title}</h5>
+                                <span className="text-muted">{node.frontmatter.date}</span>
+                                <p className="post-excerpt">{node.excerpt}</p>
+                            </Link>
                         </li>
-                    )
-                    )
+                    ))
                 }
-            </ul>
-            <Link to="/blog">
-                <button type="button" className="btn btn-primary btn-sm">View More Post</button>
-            </Link>
-        </section>
+            </ul> */}
+        </section >
     );
 }
