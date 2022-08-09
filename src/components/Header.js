@@ -5,7 +5,6 @@ export default function Header() {
   return (
     <nav className="navbar navbar-expand">
       <div className="navbar-wrapper d-flex">
-        {/* <h3><Link className="nav-link" activeClassName="active-nav-link" to="/">Buddha Gurung</Link></h3> */}
         <div className="d-flex">
           <ul className="navbar-nav">
             <li className="nav-item">
@@ -17,9 +16,6 @@ export default function Header() {
             <li className="nav-item">
               <Link to="/projects/" className="nav-link" activeClassName="active-nav-link">Projects</Link>
             </li>
-            {/* <li className="nav-item">
-              <Link to="/about/" className="nav-link" activeClassName="active-nav-link">About</Link>
-            </li> */}
           </ul>
         </div>
       </div>

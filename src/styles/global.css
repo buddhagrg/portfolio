@@ -3,7 +3,7 @@
 }
 
 .nav-link {
-    font-size: 18px !important;
+    font-size: 20px !important;
     font-weight: 600 !important;
     padding-right: 20px !important;
 }
@@ -13,23 +13,22 @@
 }
 
 .hero-container {
-    border-radius: 2px;
-    background-color: #edf2f7;
-    padding: 20px;
+    text-align: center;
+    margin-top: 100px !important;
 }
 
-.hero-container h2 {
+.hero-container h1 {
     font-weight: bold;
 }
 
 .hero-container p {
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
     color: #868e96;
 }
 
 .recent-blog-post-wrapper {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .blog-post-ul {
@@ -111,7 +110,7 @@ footer {
     max-width: var(--maxWidth);
     width: 100% !important;
     margin: 0px auto !important;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .main-wrapper {
@@ -147,12 +146,16 @@ footer {
     }
 
     .nav-link {
-        font-size: 16px !important;
+        font-size: 18px !important;
         padding-right: 10px !important;
     }
 
     .navbar-wrapper {
         padding: 10px !important;
+    }
+
+    .main-wrapper {
+        padding: 0px 10px !important;
     }
 }
 

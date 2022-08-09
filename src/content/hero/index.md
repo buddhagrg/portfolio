@@ -1,5 +1,5 @@
 ---
 category: "hero index"
 title: "Hi, I am Buddha"
-content: "I am a ReactJs Developer."
+content: "Frontend developer specializing in ReactJs."
 ---

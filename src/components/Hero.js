@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <section className="hero-container">
-      <h2>{hero.title}</h2>
+      <h1>{hero.title}</h1>
       <p>{hero.content}</p>
     </section >
   );
