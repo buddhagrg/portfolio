@@ -1,5 +1,6 @@
 :root {
     --maxWidth: 830px !important;
+    --min-screen-padding: 0px 10px !important;
 }
 
 .nav-link {
@@ -155,7 +156,11 @@ footer {
     }
 
     .main-wrapper {
-        padding: 0px 10px !important;
+        padding: var(--min-screen-padding);
+    }
+
+    .footer-wrapper {
+        padding: var(--min-screen-padding);
     }
 }
 

@@ -42,7 +42,7 @@ export default function Projects() {
                     <div className="row">
                         {
                             projects.map(({ node }) => (
-                                <div key={node.id} className="col col-sm-12 col-lg-4 col-xs-12">
+                                <div key={node.id} className="col col-lg-4 col-sm-12 col-12 mb-md-0 mb-2">
                                     <div className="card h-100">
                                         <div className="card-body">
                                             <h5>{node.frontmatter.title}</h5>
