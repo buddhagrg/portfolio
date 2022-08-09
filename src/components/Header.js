@@ -17,9 +17,9 @@ export default function Header() {
             <li className="nav-item">
               <Link to="/projects/" className="nav-link" activeClassName="active-nav-link">Projects</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/about/" className="nav-link" activeClassName="active-nav-link">About</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
