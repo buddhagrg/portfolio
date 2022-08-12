@@ -6,8 +6,7 @@ published: true
 tags: "React,Dynamic Import"
 ---
 <br>
-
-I have been using [ReactJS](https://reactjs.org/) for a while now. As I go on working on the projects, the large size of javascript bundles makes me realize to learn different ways to reduce the issues of large bundle size at least to some extent. In this blog post, I am sharing some of the ways that I have learned during my development phases.
+As the app grows larger, the javascript bundle size also starts to grow impacting the performance of the app. In this post, I am sharing some of the ways that I have implemented to optimize the app performance.
 <br>
 
 - [Splitting the chunks with Webpack](#splitting-the-chunks-with-webpack)
@@ -18,7 +17,7 @@ I have been using [ReactJS](https://reactjs.org/) for a while now. As I go on wo
 <br>
 
 ## Splitting the chunks with Webpack
-In the beginning, configuring the webpack is confusing and difficult, to be honest. I believe Webpack configuration is one of the key points for Single Page Application optimization. In this blog, I am not going to show you the splitting chunk technique with webpack because it depends really on the team and application architecture but I have been using almost all of the guidance from one of the very informative blog posts which was written by _David Gilbertson_.
+In the beginning, configuring the webpack is confusing and difficult. I believe Webpack configuration is also one of the key points for app optimization. I am not going to show you the splitting chunk technique with webpack because it depends really on the team and application architecture but I have been using almost all of the guidance from one of the very informative blog posts which was written by _David Gilbertson_.
 
 https://medium.com/hackernoon/the-100-correct-way-to-split-your-chunks-with-webpack-f8a9df5b7758
 
@@ -26,9 +25,9 @@ https://medium.com/hackernoon/the-100-correct-way-to-split-your-chunks-with-webp
 <br>
 
 ## Route level splitting
-The need for route level splitting comes when we have really big apps. It feels unpleasant to force the users to download the entire app just to see specific routes. Like, if the user wants to see the homepage, then it's unnecessary to download the admin route or any other irrelevant routes, isn't it? This is where route level splitting shines.
+The need for route level splitting comes when we have really big apps. If the user wants to see the homepage, then it's unnecessary to download the admin route or any other irrelevant routes, isn't it? This is where route level splitting shines.
 
-[React Router](https://reactrouter.com/) is one of the most popular routing libraries used in react apps. Route level splitting can be done from React Router as follows.
+[React Router](https://reactrouter.com/) is one of the most popular routing libraries used in most of the react apps. Route level splitting can be done from React Router as follows.
 
 ```jsx
 import React, { Suspense, lazy } from 'react';
