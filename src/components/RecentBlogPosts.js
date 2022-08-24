@@ -43,8 +43,10 @@ export default function RecentBlogPosts() {
                     >
                         <div className="blog-post-list">
                             <h5 className="blog-post-heading">{node.frontmatter.title}</h5>
-                            <span className="text-muted">{node.frontmatter.date}</span>
                             <p className="post-excerpt">{node.excerpt}</p>
+                            <div className="post-date">
+                                <strong>Published:</strong><span>{` `}{node.frontmatter.date}</span>
+                            </div>
                         </div>
                     </Link>
 

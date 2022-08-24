@@ -8,7 +8,7 @@ export default function Header() {
         <div className="d-flex">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link nav-link-brand" activeClassName="active-nav-link" to="/">Buddha Gurung</Link>
+              <Link className="nav-link" activeClassName="active-nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
               <Link to="/blog/" className="nav-link" activeClassName="active-nav-link">Blog</Link>
