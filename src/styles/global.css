@@ -4,8 +4,8 @@
 }
 
 .nav-link {
-    font-size: 20px !important;
-    font-weight: 600 !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
     padding-right: 20px !important;
 }
 
@@ -13,12 +13,13 @@
     color: #2b6bb1 !important;
 }
 
-.hero-container h1 {
+.hero-container h3 {
     font-weight: bold;
+    color: #4b4b4b;
 }
 
 .hero-container p {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
     color: #868e96;
 }
@@ -37,12 +38,12 @@
     padding-bottom: 18px;
 }
 
-.blog-post-list:hover {
-    background-color: #edf2f7 !important;
-}
-
 .blog-post-link {
     text-decoration: none !important;
+}
+
+.blog-post-list:hover .blog-post-heading {
+    text-decoration: underline !important;
 }
 
 .blog-post-heading {
@@ -106,7 +107,6 @@ footer {
     width: 100% !important;
     margin: 0px auto !important;
     padding-top: 10px;
-    border-bottom: 2px solid #edf2f7;
 }
 
 .main-wrapper {
@@ -170,4 +170,21 @@ footer {
 
 .card:hover {
     background-color: #edf2f7;
+}
+
+.back-arrow-div {
+    margin-bottom: 20px;
+}
+
+.back-arrow-div a {
+    text-decoration: none !important;
+    color: #2b6bb1 !important;
+}
+
+.back-arrow-icon {
+    font-size: 25px;
+}
+
+.back-arrow-text {
+    font-size: 18px;
 }

@@ -14,6 +14,12 @@ export default function BlogPost({ data, pageContext }) {
           title={post.frontmatter.title}
           description={post.excerpt}
         />
+        <div className="back-arrow-div">
+          <Link to="/blog">
+            <span className="back-arrow-icon">←{` `}</span>
+            <span className="back-arrow-text">Back</span>
+          </Link>
+        </div>
         <h1 className="post-title">{post.frontmatter.title}</h1>
         <h6 className="text-muted">{post.frontmatter.date}</h6>
         <Tag tags={post.frontmatter.tags} />

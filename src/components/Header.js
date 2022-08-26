@@ -8,13 +8,13 @@ export default function Header() {
         <div className="d-flex">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" activeClassName="active-nav-link" to="/">Home</Link>
+              <Link className="nav-link" activeClassName="active-nav-link" to="/">HOME</Link>
             </li>
             <li className="nav-item">
-              <Link to="/blog/" className="nav-link" activeClassName="active-nav-link">Blog</Link>
+              <Link to="/blog" className="nav-link" activeClassName="active-nav-link" partiallyActive={true}>BLOG</Link>
             </li>
             <li className="nav-item">
-              <Link to="/projects/" className="nav-link" activeClassName="active-nav-link">Projects</Link>
+              <Link to="/projects" className="nav-link" activeClassName="active-nav-link">PROJECTS</Link>
             </li>
           </ul>
         </div>
