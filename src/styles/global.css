@@ -1,6 +1,6 @@
 :root {
     --maxWidth: 830px !important;
-    --min-screen-padding: 0px 10px !important;
+    --min-screen-padding: 0px 25px !important;
 }
 
 .nav-link {
