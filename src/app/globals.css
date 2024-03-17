@@ -1,0 +1,150 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+    --link-color: #0E6DA3;
+    --border-color: #dbdbdb;
+    --light-text-color: #777777;
+    --light-link-color: #076da7;
+}
+
+[data-theme='dark'] {
+    --background-color: #303030;
+    --text-color: white;
+    --light-text-color: #ccc5c5;
+    --border-color: #525252;
+    --link-color: #e4d700;
+    --light-link-color: #7a730a;
+}
+
+body {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.root-container {
+    width: 100%;
+    max-width: 700px !important;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .root-container {
+        max-width: none !important;
+        padding: 10px;
+    }
+}
+
+nav>ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav>ul>li {
+    padding: 0px 30px 0px 0px;
+}
+
+.navbar-link {
+    font-size: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.hero-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid var(--border-color) !important;
+    background-color: white;
+}
+
+footer {
+    color: var(--light-text-color) !important;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+.content-wrapper {
+    margin: 100px 0px;
+}
+
+.hero-container {
+    margin-bottom: 100px;
+}
+
+.hero-container h4 {
+    font-weight: 600;
+}
+
+.post-title-link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-article {
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px var(--border-color),
+        -5px 5px 5px var(--border-color),
+        5px 5px 5px var(--border-color);
+}
+
+.post-article div {
+    font-weight: 600;
+    color: var(--link-color);
+}
+
+.latest-post-label {
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: var(--link-color);
+}
+
+.project-item {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border-top: none !important;
+    box-shadow: 0px 0px 5px var(--border-color),
+        -5px 5px 5px var(--border-color),
+        5px 5px 5px var(--border-color);
+}
+
+.project-item p {
+    color: var(--light-text-color) !important;
+}
+
+.tag-badge {
+    background-color: var(--light-link-color) !important;
+    margin-right: 5px;
+}
+
+.markdown-content {
+    margin-top: 50px;
+}
+
+.markdown-content a {
+    color: var(--link-color);
+}
+
+.navlink-active {
+    border-bottom: 3px solid var(--link-color);
+}
+
+.theme-switch input {
+    width: 2.5rem !important;
+    height: 1.3rem !important;
+    border-color: var(--light-text-color) !important;
+}
+
+.return-home-link {
+    color: var(--link-color) !important;
+}
