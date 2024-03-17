@@ -7,7 +7,7 @@ export default function LatestPosts() {
         <>
             <div className="latest-post-label">Latest Posts</div>
             {
-                posts.map(post => <PostItem {...post} />)
+                posts.map(post => <PostItem key={post.title} {...post} />)
             }
         </>
     )
