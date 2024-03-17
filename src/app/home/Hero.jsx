@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Col, Row } from "react-bootstrap";
-import ProfileImg from "../../assets/profile.jpg";
-import HeroImg from "../../assets/hero-img.jpg";
+import ProfileImg from "../../assets/profile-img.jpg";
 
 export default function Hero() {
     return (
