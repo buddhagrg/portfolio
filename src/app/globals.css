@@ -152,3 +152,9 @@ footer {
 .return-home-link {
     color: var(--link-color) !important;
 }
+
+.social-link {
+    color: var(--link-color);
+    padding-right: 15px;
+    font-size: 22px;
+}
