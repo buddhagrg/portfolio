@@ -1,5 +1,8 @@
+import { format } from "date-fns";
+
 export default function Footer() {
+    const currentYear = format(new Date(), 'yyyy');
     return (
-        <footer>Made with &#10084;</footer>
+        <footer>&copy; {currentYear} Buddha Gurung</footer>
     );
 }

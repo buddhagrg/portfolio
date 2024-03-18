@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Form } from "react-bootstrap";
+import { BsMoon, BsSun } from "react-icons/bs";
 import { useTheme } from "@/hook/useTheme";
 
 const navItems = [
@@ -14,7 +14,7 @@ const navItems = [
 
 export default function Header() {
     const pathname = usePathname();
-    const [theme, handleTheme] = useTheme();
+    const [isThemeLight, handleTheme] = useTheme();
 
     return (
         <nav className="d-flex">
@@ -28,13 +28,9 @@ export default function Header() {
                 }
             </ul>
             <div className="ms-auto">
-                <Form.Check
-                    type="switch"
-                    id="custom-switch"
-                    className="theme-switch"
-                    onChange={handleTheme}
-                    checked={theme === 'dark'}
-                ></Form.Check>
+                <div onClick={handleTheme} className="theme-switch">
+                    {isThemeLight ? <BsMoon /> : <BsSun />}
+                </div>
             </div>
         </nav>
     );

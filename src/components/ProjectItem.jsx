@@ -5,7 +5,7 @@ import { BsGithub, BsFillRocketTakeoffFill } from "react-icons/bs";
 
 export default function ProjectItem({ title, subtitle, code, demo }) {
     return (
-        <Col lg={6} sm={12} className="mb-2 mb-sm-4">
+        <Col lg={6} sm={12} className="mb-4">
             <Card className="project-item">
                 <Card.Body>
                     <h4>{title}</h4>

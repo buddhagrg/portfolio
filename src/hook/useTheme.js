@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 
 const useTheme = () => {
-    const [theme, setTheme] = useState('light');
+    const [isThemeLight, setIsThemeLight] = useState('light');
 
     useEffect(() => {
-        document.body.setAttribute('data-theme', theme);
-    }, [theme]);
+        document.body.setAttribute('data-theme', isThemeLight ? 'light' : 'dark');
+    }, [isThemeLight]);
 
-    const handleTheme = (event) => {
-        const isChecked = event.target.checked;
-        setTheme(isChecked ? 'dark' : 'light');
+    const handleTheme = () => {
+        setIsThemeLight(!isThemeLight)
     }
 
-    return [theme, handleTheme];
+    return [isThemeLight, handleTheme];
 }
 
 export { useTheme };
