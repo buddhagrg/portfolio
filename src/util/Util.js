@@ -24,7 +24,7 @@ export const getPostMetadata = () => {
         }
     }).filter(Boolean);
 
-    return posts;
+    return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 export const getFormattedDate = (dt) => {

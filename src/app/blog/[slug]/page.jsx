@@ -6,6 +6,13 @@ export const generateStaticParams = async () => {
     return posts.map(({ slug }) => ({ slug }));
 }
 
+export async function generateMetadata({ params }) {
+    const id = params?.slug ? ` - ${params?.slug}` : '';
+    return {
+        title: `Blogs ${id.replaceAll('_', ' ')}`
+    }
+}
+
 export default function PostPage({ params: { slug } }) {
     const { data: { title, date, tags }, content } = getPostContent(slug);
     return (
