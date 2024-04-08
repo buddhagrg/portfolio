@@ -2,17 +2,27 @@ import Image from "next/image";
 import { Col, Row } from "react-bootstrap";
 import ProfileImg from "../../assets/profile-img.jpg";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { GITHUB_LINK, LINKEDIN_LINK } from "../data";
+import { GITHUB_LINK, LINKEDIN_LINK, RESUME_DOCS_LINK, WORK_EMAIL_LINK } from "../data";
 
 export default function Hero() {
     return (
         <Row className="hero-container">
-            <Col lg={{ span: 8, order: 0 }} xs={{ span: 12, order: 1 }} className="text-left text-md-start">
-                <h4 className="my-4">Hi, I'm Buddha</h4>
+            <Col xs={12}>
+                <Image
+                    src={ProfileImg}
+                    className="hero-img"
+                    placeholder="blur"
+                    alt="Profile"
+                />
+            </Col>
+            <Col>
+                <h4 className="mt-5 mb-3">Buddha Gurung</h4>
                 <p>
-                    I'm a software engineer specializing in ReactJs. I have passion for building interactive interfaces
-                    that are beautiful and functional for wide range of users.
+                    I'm a software engineer specializing in building interactive interfaces
+                    that are beautiful and functional for wide range of users using Javascript and ReactJS.
                 </p>
+
+                <p className="hero-mail-link">If you would like to collaborate, please <a href={`mailto:${WORK_EMAIL_LINK}`}>send me an email</a> or reach out on any of my social handles.</p>
                 <div className="d-flex">
                     <a className="social-link" href={LINKEDIN_LINK}>
                         <BsLinkedin />
@@ -21,14 +31,9 @@ export default function Hero() {
                         <BsGithub />
                     </a>
                 </div>
-            </Col>
-            <Col lg={{ span: 4, order: 1 }} xs={{ span: 12, order: 0 }} className="text-center text-md-right">
-                <Image
-                    src={ProfileImg}
-                    className="hero-img"
-                    placeholder="blur"
-                    alt="Profile"
-                />
+                <div className="resume-link">
+                    <a href={RESUME_DOCS_LINK} target="_blank">View Resume</a>
+                </div>
             </Col>
         </Row>
     );

@@ -12,7 +12,7 @@
     --text-color: #cbd5e0;
     --light-text-color: #ccc5c5;
     --border-color: #525252;
-    --link-color: #e4d700;
+    --link-color: white;
     --light-link-color: #7a730a;
 }
 
@@ -58,8 +58,8 @@ nav>ul>li {
 }
 
 .hero-img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     border-radius: 50%;
     border: 1px solid var(--border-color) !important;
@@ -75,7 +75,7 @@ footer {
 }
 
 .content-wrapper {
-    margin: 100px 0px;
+    margin: 80px 0px;
 }
 
 .hero-container {
@@ -86,27 +86,34 @@ footer {
     font-weight: 600;
 }
 
-.post-title-link {
-    color: var(--text-color);
+.post {
     text-decoration: none;
 }
 
-.post-article {
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0px 0px 5px var(--border-color),
-        -5px 5px 5px var(--border-color),
-        5px 5px 5px var(--border-color);
+.post>article {
+    margin-bottom: 10px;
+    padding: 15px 5px;
+    border: 1px solid transparent;
 }
 
-.post-article div {
-    font-weight: 600;
+.post>article:hover {
+    border: 1px solid var(--border-color);
+}
+
+.post div {
     color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.latest-post-label {
-    font-weight: 500;
-    font-size: 17px;
+.post small {
+    color: var(--light-text-color);
+}
+
+.page-heading {
+    font-weight: 600;
+    font-size: 19px;
     margin-bottom: 10px;
 }
 
@@ -154,7 +161,23 @@ footer {
 }
 
 .social-link {
-    color: var(--link-color);
+    color: var(--light-text-color);
     padding-right: 15px;
     font-size: 22px;
+}
+
+.resume-link {
+    margin-top: 20px !important;
+}
+
+.resume-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-mail-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
 }

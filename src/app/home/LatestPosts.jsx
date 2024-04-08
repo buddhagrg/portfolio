@@ -5,7 +5,8 @@ export default function LatestPosts() {
     const posts = getPostMetadata();
     return (
         <>
-            <div className="latest-post-label">Latest Posts</div>
+            <div className="page-heading">Latest Posts</div>
+            <hr />
             {
                 posts.map(post => <PostItem key={post.title} {...post} />)
             }

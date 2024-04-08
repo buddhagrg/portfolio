@@ -9,5 +9,12 @@ export async function generateMetadata() {
 
 export default function Blog() {
     const posts = getPostMetadata();
-    return posts.map(post => <PostItem key={post.title} {...post} />);
+    return (
+        <>
+            <div className="page-heading">Blog.</div>
+            {
+                posts.map(post => <PostItem key={post.title} {...post} />)
+            }
+        </>
+    )
 }
