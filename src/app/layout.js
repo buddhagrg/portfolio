@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "@/components/Header";
 import { Container } from "react-bootstrap";
 import Footer from "@/components/Footer";
-import '../assets/prism-one-dark.css';
+import '../assets/prism-one-light.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
