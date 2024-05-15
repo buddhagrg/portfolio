@@ -9,7 +9,7 @@ export default function ProjectItem({ title, subtitle, code, demo, stack }) {
             <Card className="project-item h-100">
                 <Card.Body>
                     <h4>{title}</h4>
-                    <p className="my-4">{subtitle}</p>
+                    <p className="project-item-subtitle">{subtitle}</p>
                     <div className="project-stack">Stack: {` `}{stack}</div>
                     <div className="d-flex">
                         <a className="project-link" href={code}>
