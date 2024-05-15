@@ -181,3 +181,8 @@ footer {
     text-decoration: none;
     border-bottom: 1px solid var(--border-color);
 }
+
+.project-stack {
+    color: var(--text-color);
+    margin-bottom: 5px;
+}

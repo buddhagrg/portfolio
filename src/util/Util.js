@@ -56,14 +56,15 @@ export const getProjectMetadata = () => {
 
     const projects = markdownProjects.map(filename => {
         const fileContents = fs.readFileSync(path.join(BASE_PATH, PROJECT_PATH, filename), 'utf8');
-        const { data: { title, subtitle, code, demo, date } } = matter(fileContents);
+        const { data: { title, subtitle, code, demo, date, stack } } = matter(fileContents);
 
         return {
             title,
             subtitle,
             code,
             demo,
-            date
+            date,
+            stack
         }
     }).filter(Boolean);
 
