@@ -18,7 +18,7 @@ export default function PostPage({ params: { slug } }) {
     return (
         <>
             <h1>{title}</h1>
-            <small>{getFormattedDate(date)}</small>
+            <small>Last Updated: {getFormattedDate(date)}</small>
             <div><Tag tags={tags} /></div>
             <PrismFormat content={content} />
         </>
