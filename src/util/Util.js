@@ -6,7 +6,7 @@ import { format } from 'date-fns';
 const BASE_PATH = 'content';
 const POST_PATH = '/blogs';
 const PROJECT_PATH = '/projects';
-const DEFAULT_DATE_FORMAT = 'dd MMM, yyyy';
+const DEFAULT_DATE_FORMAT = 'MMMM dd, yyyy';
 
 export const getPostMetadata = () => {
     const files = fs.readdirSync(path.join(BASE_PATH + POST_PATH));
