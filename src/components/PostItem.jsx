@@ -6,7 +6,7 @@ export default function PostItem({ title, date, slug }) {
         <Link href={`blog/${slug}`} className="post">
             <article>
                 <div>{title}</div>
-                <small>Last Updated: {getFormattedDate(date)}</small>
+                <small>{getFormattedDate(date)}</small>
             </article>
         </Link>
     )
