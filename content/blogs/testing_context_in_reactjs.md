@@ -1,7 +1,7 @@
 ---
 category: "blog"
 title: "Testing React Contexts"
-date: "2024-05-12"
+date: "2024-05-19"
 published: true
 tags: "React Context, Vitest, Vite"
 ---
