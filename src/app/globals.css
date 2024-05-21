@@ -4,7 +4,8 @@
     --link-color: #0E6DA3;
     --border-color: #dbdbdb;
     --light-text-color: #777777;
-    --light-link-color: #076da7;
+    --light-link-color: #308fc7;
+    --very-light-link-color: #d4e3ec;
 }
 
 [data-theme='dark'] {
@@ -12,8 +13,9 @@
     --text-color: #cbd5e0;
     --light-text-color: #ccc5c5;
     --border-color: #525252;
-    --link-color: white;
-    --light-link-color: #7a730a;
+    --link-color: #e0d322;
+    --light-link-color: #d5d07f;
+    --very-light-link-color: #f9f8d2;
 }
 
 body {
@@ -136,7 +138,7 @@ footer {
 }
 
 .tag-badge {
-    background-color: var(--light-link-color) !important;
+    background-color: rgb(94, 94, 94);
     margin-right: 5px;
 }
 
@@ -190,9 +192,11 @@ footer {
 }
 
 blockquote {
-    border-left: 5px solid var(--light-text-color);
+    border-left: 5px solid #0E6DA3;
+    border-radius: 6px;
     padding: 5px 5px 5px 10px;
     font-size: 14px;
     margin-top: 0;
-    background-color: var(--border-color);
+    background-color: #d4e3ec;
+    color: black;
 }
