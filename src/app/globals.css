@@ -5,7 +5,6 @@
     --border-color: #dbdbdb;
     --light-text-color: #777777;
     --light-link-color: #308fc7;
-    --very-light-link-color: #d4e3ec;
 }
 
 [data-theme='dark'] {
@@ -15,7 +14,6 @@
     --border-color: #525252;
     --link-color: #e0d322;
     --light-link-color: #d5d07f;
-    --very-light-link-color: #f9f8d2;
 }
 
 body {
