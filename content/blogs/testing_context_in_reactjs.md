@@ -25,12 +25,10 @@ We will be using vitest, jsdom and React-Testing-Library during this process. Th
 import * as React from "react";
 
 export type Theme = "light" | "dark";
-
 export type ThemeContextType = {
     theme: Theme;
     toggleTheme: () => void;
 };
-
 export const ThemeContext = React.createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
@@ -56,8 +54,7 @@ Here, we have a context provider that provider functionality for theme value and
 
 &nbsp;
 
-**Consuming the context**
-
+**Consuming the context**\
 As this is just a demo app, we have consumed the context in the **App.tsx** component. Before using the context, we need to wrap the App component with the **ThemeProvider.**
 
 ```jsx
@@ -127,9 +124,12 @@ describe("<App />", () => {
 });
 ```
 &nbsp;
-> **import { render } from "@testing-library/react";**
+> **IMPORTANT**
+> ```jsx
+> import { render } from "@testing-library/react"; 
+> ```
 >
-> > Remember this import. We are importing the render method from the library directly.
+> Remember this import. We are importing the render method from the library directly.
 &nbsp;
 
 The App component is wrapped around with the ThemeProvider component as needed. As expected, the test passes with the expected text **_Current Theme is: light_**. This is just a demo app, but in large apps there could be multiple components consuming the context values. So, it is actually boring to import the context provider every time leading to code redundancy. We will utilize the functionality of the RTL and create a custom util function, this is where the util function shines.
@@ -195,8 +195,11 @@ describe("<App />", () => {
 ```
 
 &nbsp;
-> **import { render } from "./util/rtl-custom";**
-> > We have exactly the same code as our previous one. The only difference is that we are using the render method from **"./util/rtl-custom"** instead of **"@testing-library/react"**.
+> **IMPORTANT**
+> ```jsx
+> import { render } from "./util/rtl-custom";
+> ```
+> We have exactly the same code as our previous one. The only difference is that we are using the render method from **"./util/rtl-custom"** instead of **"@testing-library/react"**.
 
 
 I believe this is a  better better solution. Obviously, there are plenty of scenarios we can add for testing but this is out of our article topic.
