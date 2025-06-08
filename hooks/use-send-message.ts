@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import type { ApiResponse, FormState } from "@/types";
+import { WEB_FORM_ACCESS_KEY } from "@/config";
 
 const apiState: FormState = {
   loading: false,
   success: false,
   message: "",
 };
-const WEB_FORM_ACCESS_KEY = `f4565921-b7cf-413b-b8be-cab77b0ac0a6`;
+
 export const useSendMessage = () => {
   const [state, setState] = useState<FormState>(apiState);
 
