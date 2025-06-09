@@ -8,9 +8,12 @@ You must **create** a **.env** file at the root of the project with following va
 > Check [.env.example](.env.example) for format.
 
 ## Getting Started
+First, install the npm packages:
+```bash
+npm install
+```
 
-First, run the development server:
-
+Second, run the development server:
 ```bash
 npm run dev
 ```
