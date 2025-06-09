@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Prerequisite
+You need to create a **.env** file at the root of the project that contains two required **.env** variables.
+
+[.env.example](.env.example) contains the format example:
+- **NEXT_PUBLIC_URL:** for social media link preview 
+- **NEXT_PUBLIC_WEB_FORM_ACCESS_KEY:** for email support _(you can get from https://web3forms.com/)_
+
 ## Getting Started
 
 First, run the development server:
