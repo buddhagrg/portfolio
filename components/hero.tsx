@@ -6,10 +6,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export function Hero() {
   return (
-    <section className="min-h-[0vh] pt-10 md:pt-20 mt-10" id="home">
+    <section className="min-h-[60vh] pt-10 md:pt-20 mt-10" id="home">
       <div className="container max-w-4xl mx-auto flex flex-col md:flex-row space-x-10">
         <div className="mb-5 md:mb-0 flex justify-center">
-          <Avatar className="border-2 border-primary shadow-lg">
+          <Avatar className="border-2 border-border shadow-lg">
             <AvatarImage src="/profile.png" alt="Profile picture" />
             <AvatarFallback className="bg-primary/10 text-primary text-xl">
               BG

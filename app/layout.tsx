@@ -19,13 +19,28 @@ export const metadata: Metadata = generateCustomMetadata({
   description: "Buddha Gurung | Personal site",
 });
 
+const setInitialTheme = `
+  (function(){
+    try{
+      const theme = localStorage.getItem("theme");
+      if(theme === "DARK"){
+        document.documentElement.classList.add("dark");        
+      }
+    }
+    catch(_){}
+  })()
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

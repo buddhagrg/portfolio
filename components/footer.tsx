@@ -5,7 +5,7 @@ export const Footer = () => {
   const currentYear = now.getFullYear();
 
   return (
-    <footer className="pt-0 md:pt-0.5 pb-5 md:pb-10 text-muted-foreground text-sm bg-gray-100">
+    <footer className="pt-0 md:pt-0.5 pb-5 md:pb-10 text-muted-foreground text-sm bg-background-secondary">
       <div className="max-w-4xl mx-auto text-center">
         <div className="flex flex-col md:flex-row items-center mt-10">
           <div>&copy; {currentYear} Buddha Gurung. All rights reserved.</div>

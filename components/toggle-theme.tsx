@@ -1,0 +1,21 @@
+"use client";
+
+import { useDarkMode } from "@/hooks/use-dark-mode";
+import { Moon, Sun } from "lucide-react";
+
+export const ToggleTheme = () => {
+  const { isDarkMode, toggleThemeMode } = useDarkMode();
+
+  return (
+    <div
+      onClick={toggleThemeMode}
+      className="text-foreground/70 hover:cursor-pointer  hover:text-foreground"
+    >
+      {isDarkMode ? (
+        <Sun className="size-6 md:size-5" />
+      ) : (
+        <Moon className="size-6 md:size-5" />
+      )}
+    </div>
+  );
+};
