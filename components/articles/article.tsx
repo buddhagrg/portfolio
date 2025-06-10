@@ -25,7 +25,7 @@ export const Article = ({ article }: { article: ArticleMeta }) => {
             {article.description}
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-grow justify-between items-center">
+        <CardContent className="flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="space-x-2">
             <Tags tags={article.tags} />
           </div>

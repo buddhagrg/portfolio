@@ -31,7 +31,7 @@ export function Articles() {
           <div>Want to read more of my articles?</div>
           <Button className="mt-4" asChild>
             <Link href={"/articles"} className="flex items-center">
-              <FileText className="size-6 md:size-4" />
+              <FileText className="size-6 md:size-5 lg:size-4" />
               <span>View All Articles</span>
             </Link>
           </Button>

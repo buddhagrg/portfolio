@@ -52,7 +52,7 @@ export default async function Article({ params }: Props) {
           href="/articles"
           className="flex mb-5 items-center gap-2 text-primary font-medium hover:text-primary/80"
         >
-          <MoveLeft className="size-6 md:size-4" />
+          <MoveLeft className="size-6 md:size-5 lg:size-4" />
           <span className="text-sm">Back to all articles</span>
         </Link>
         <h1 className="text-4xl font-bold">{title}</h1>

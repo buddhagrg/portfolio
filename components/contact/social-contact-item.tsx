@@ -11,7 +11,7 @@ export const SocialContactItem: React.FC<SocialContactItemProps> = ({
 
   return (
     <div className="flex gap-4 mb-0 md:mb-3">
-      <Icon className="mt-2 md:mt-1 size-6 md:size-4" />
+      <Icon className="mt-2 md:mt-1 size-6 md:size-5 lg:size-4" />
       <div>
         <div className="font-medium">{name}</div>
         <a href={link} className="text-muted-foreground pt-0">

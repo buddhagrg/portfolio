@@ -21,18 +21,18 @@ export const Project = ({ project }: { project: ProjectMeta }) => {
           {project.subtitle}
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="space-x-2">
+      <CardContent className="flex flex-col space-x-2 space-y-2">
+        <div className="space-x-2 space-y-2">
           <Tags tags={project.stack} />
         </div>
 
-        <div className="flex items-center mt-5 space-x-4">
+        <div className="flex space-x-2 space-y-2">
           <Button variant="outline" asChild>
             <Link
               href={project.demo}
               className="inline-flex items-center gap-2"
             >
-              <Link2 className="size-6 md:size-4" />
+              <Link2 className="size-6 md:size-5 lg:size-4" />
               <p className="font-normal">Live Demo</p>
             </Link>
           </Button>
@@ -41,7 +41,7 @@ export const Project = ({ project }: { project: ProjectMeta }) => {
               href={project.code}
               className="inline-flex items-center gap-2"
             >
-              <GithubIcon className="size-6 md:size-4" />
+              <GithubIcon className="size-6 md:size-5 lg:size-4" />
               <p className="font-normal">Source Code</p>
             </Link>
           </Button>

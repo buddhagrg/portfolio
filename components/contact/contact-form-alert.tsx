@@ -8,7 +8,7 @@ export const ContactFormAlert = ({
   const bg = success ? "bg-green-100" : "bg-red-100";
   const color = `text-gray-700`;
   const label = success ? "Success" : "Error";
-  const iconClass = `size-6 md:size-5`;
+  const iconClass = `size-6 md:size-5 lg:size-4`;
 
   return (
     <div className={`p-2 border rounded-md flex gap-2 ${bg}`}>

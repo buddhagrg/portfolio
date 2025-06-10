@@ -24,7 +24,7 @@ export const ContactForm = () => {
     }
   };
 
-  const iconClass = `size-6 md:size-4`;
+  const iconClass = `size-6 md:size-5 lg:size-4`;
   return (
     <form onSubmit={handleSubmit}>
       <h4 className="text-xl font-medium mb-5">Contact Form</h4>

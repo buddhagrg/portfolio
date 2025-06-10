@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="flex gap-5 md:gap-10 hover:cursor-pointer md:ml-auto">
             {socialLinks.map(({ id, icon: Icon, link }) => (
               <a href={link} key={id}>
-                <Icon className="size-6 md:size-4" />
+                <Icon className="size-6 md:size-5 lg:size-4" />
               </a>
             ))}
           </div>

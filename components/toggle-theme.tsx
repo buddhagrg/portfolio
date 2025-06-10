@@ -9,12 +9,12 @@ export const ToggleTheme = () => {
   return (
     <div
       onClick={toggleThemeMode}
-      className="text-foreground/70 hover:cursor-pointer  hover:text-foreground"
+      className="text-foreground/70 hover:cursor-pointer hover:text-foreground"
     >
       {isDarkMode ? (
-        <Sun className="size-6 md:size-5" />
+        <Sun className="size-7 md:size-5" />
       ) : (
-        <Moon className="size-6 md:size-5" />
+        <Moon className="size-7 md:size-5" />
       )}
     </div>
   );

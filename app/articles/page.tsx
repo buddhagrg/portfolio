@@ -21,10 +21,10 @@ export default function Articles() {
   return (
     <SiteLayout>
       <section className="max-w-4xl mx-auto pt-30 pb-20">
-        <div className="flex items-center gap-4">
-          <Button variant="outline" asChild>
+        <div className="flex flex-col md:flex-row md:items-center gap-4">
+          <Button variant="outline" asChild className="w-fit">
             <Link href={"/"} className="flex items-center space-x-1">
-              <MoveLeft className="size-6 md:size-4" />
+              <MoveLeft className="size-6 md:size-5 lg:size-4" />
               <div className="text-base font-normal">Back Home</div>
             </Link>
           </Button>

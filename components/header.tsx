@@ -15,15 +15,17 @@ export function Header() {
   ];
 
   return (
-    <header className="md:py-4 fixed start-0 top-0 left-0 w-full border-gray-200 bg-background z-50">
+    <header className="md:py-4 fixed start-0 top-0 left-0 w-full bg-background-secondary z-50">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center">
+        <div className="flex flex-col md:flex-row">
           <h4 className="text-xl font-medium text-foreground/70 hover:text-foreground">
             <Link href={"/"}>Buddha Gurung</Link>
           </h4>
 
           <div
-            className={`space-x-6 ml-auto mr-5 ${isHomePage ? "" : "hidden"}`}
+            className={`flex items-center space-x-6 md:ml-auto mr-5 ${
+              isHomePage ? "" : "hidden"
+            }`}
           >
             {menus.map(({ id, name }) => (
               <Link
@@ -34,8 +36,8 @@ export function Header() {
                 {name}
               </Link>
             ))}
+            <ToggleTheme />
           </div>
-          <ToggleTheme />
         </div>
       </div>
     </header>

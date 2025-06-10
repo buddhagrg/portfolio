@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export function Hero() {
   return (
-    <section className="min-h-[60vh] pt-10 md:pt-20 mt-10" id="home">
+    <section className="min-h-[60vh] pt-20 mt-10" id="home">
       <div className="container max-w-4xl mx-auto flex flex-col md:flex-row space-x-10">
         <div className="mb-5 md:mb-0 flex justify-center">
           <Avatar className="border-2 border-border shadow-lg">
@@ -42,14 +42,14 @@ export function Hero() {
           <div className="flex flex-wrap gap-3">
             <Button asChild>
               <Link href="/projects" className="inline-flex items-center gap-2">
-                <Code className="size-6 md:size-4" />
+                <Code className="size-6 md:size-5 lg:size-4" />
                 View Projects
               </Link>
             </Button>
 
             <Button variant="outline" asChild>
               <Link href="/articles" className="inline-flex items-center gap-2">
-                <FileText className="size-6 md:size-4" />
+                <FileText className="size-6 md:size-5 lg:size-4" />
                 Read Articles
               </Link>
             </Button>
@@ -59,7 +59,7 @@ export function Hero() {
                 href="/resume.pdf"
                 className="inline-flex items-center gap-2"
               >
-                <FileUser className="size-6 md:size-4" />
+                <FileUser className="size-6 md:size-5 lg:size-4" />
                 View Resume
               </Link>
             </Button>

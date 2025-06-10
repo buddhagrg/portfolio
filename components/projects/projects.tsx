@@ -31,7 +31,7 @@ export function Projects() {
           <div>Interested in seeing more of my work?</div>
           <Button className="mt-4" asChild>
             <Link href={"/projects"} className="inline-flex items-center">
-              <GithubIcon className="size-6 md:size-4" />
+              <GithubIcon className="size-6 md:size-5 lg:size-4" />
               <span>View All Projects</span>
             </Link>
           </Button>
