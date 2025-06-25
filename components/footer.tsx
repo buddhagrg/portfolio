@@ -17,9 +17,6 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-        <p className="mt-0 md:mt-5">
-          Designed and built with React, Typescript, and Tailwind CSS
-        </p>
       </div>
     </footer>
   );
