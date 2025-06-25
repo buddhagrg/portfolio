@@ -1,7 +1,7 @@
 "use client";
 
-import { useDarkMode } from "@/hooks/use-dark-mode";
 import { Moon, Sun } from "lucide-react";
+import { useDarkMode } from "@/hooks/use-dark-mode";
 
 export const ToggleTheme = () => {
   const { isDarkMode, toggleThemeMode } = useDarkMode();

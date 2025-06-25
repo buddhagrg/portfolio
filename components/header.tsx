@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ToggleTheme } from "./toggle-theme";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+
+import { ToggleTheme } from "./toggle-theme";
 
 export function Header() {
   const pathname = usePathname();

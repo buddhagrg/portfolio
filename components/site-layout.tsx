@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Footer } from "./footer";
 import { Header } from "./header";
+import { Footer } from "./footer";
 
 export const SiteLayout = ({ children }: { children: React.ReactNode }) => {
   return (
