@@ -38,7 +38,7 @@ export function ContactInfo() {
         <SocialContactItem key={link.id} item={link} />
       ))}
 
-      <div className="mt-1" />
+      <div className="mt-5" />
       <CurrentStatus />
     </section>
   );
