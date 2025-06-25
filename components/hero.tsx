@@ -3,6 +3,7 @@ import { Code, FileText, FileUser } from "lucide-react";
 
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Availability } from "./availability";
 
 export function Hero() {
   return (
@@ -17,29 +18,26 @@ export function Hero() {
           </Avatar>
         </div>
         <div>
-          <p className="font-mono text-lg text-primary mb-1">
-            Hello, my name is
-          </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
             Buddha Gurung
           </h1>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-500 mb-2">
+          <h2 className="text-xl md:text-2xl text-muted-foreground mb-2">
             Frontend developer
           </h2>
-          <div className="space-y-4 mb-6">
-            <p className="text-sm md:text-base text-muted-foreground">
-              Frontend developer with 3 years of experience specializing in
-              React.js. Building clean, responsive and user-friendly web
+          <div className="space-y-4 my-6">
+            <p className="text-base md:text-lg">
+              React developer with 3+ years building modern, user-focused web
               applications.
             </p>
 
-            <p className="text-sm md:text-base text-muted-foreground">
-              When I&apos;m not coding, I enjoy hiking, reading tech blogs, and
-              experimenting with new web technologies. I&apos;m always open to
-              learning new things and tackling challenging projects.
+            <p className="text-base md:text-lg text-muted-foreground">
+              Passionate about clean design, smooth user experiences, and
+              maintainable code. Currently expanding backend skills for
+              full-stack solutions.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <Availability />
+          <div className="flex flex-wrap gap-3 mt-5">
             <Button asChild>
               <Link href="/projects" className="inline-flex items-center gap-2">
                 <Code className="size-6 md:size-5 lg:size-4" />
