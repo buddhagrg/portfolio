@@ -22,7 +22,7 @@ export function Header() {
   );
 
   return (
-    <header className="md:py-4 fixed start-0 top-0 left-0 w-full bg-background-secondary z-50">
+    <header className="md:py-4 fixed start-0 top-0 left-0 w-full z-50 backdrop-blur-md">
       <div
         className={clsx(
           `max-w-4xl mx-auto flex flex-col md:flex-row justify-between md:items-center`,
