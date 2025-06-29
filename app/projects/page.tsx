@@ -1,10 +1,7 @@
-import { MoveLeft } from "lucide-react";
 import { Metadata } from "next";
-import Link from "next/link";
 
 import { Project } from "@/components/projects/project";
 import { SiteLayout } from "@/components/site-layout";
-import { Button } from "@/components/ui/button";
 import { generateCustomMetadata, getProjectMetadata } from "@/utils";
 
 export const metadata: Metadata = generateCustomMetadata({
@@ -18,23 +15,14 @@ export default function Projects() {
 
   return (
     <SiteLayout>
-      <section className="max-w-4xl mx-auto pt-30 pb-20">
-        <div className="flex flex-col md:flex-row md:items-center gap-4">
-          <Button variant="outline" asChild className="w-fit">
-            <Link href={"/"} className="flex items-center space-x-1">
-              <MoveLeft className="size-6 md:size-5 lg:size-4" />
-              <div className="text-base font-normal">Back Home</div>
-            </Link>
-          </Button>
-          <h2 className="text-4xl font-medium">All Projects</h2>
+      <section className="max-w-3xl mx-auto pt-15 pb-20">
+        <h2 className="text-3xl font-bold">Projects</h2>
+
+        <div className="text-lg text-muted-foreground mt-2 mb-8">
+          A collection of my recent work and side projects.
         </div>
 
-        <div className="text-lg text-muted-foreground mt-5 mb-8">
-          Explore all the projects I&apos;ve worked on, from web applications to
-          design systems.
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+        <div className="grid grid-cols-1 gap-y-5">
           {projects.map((project) => (
             <Project key={project.title} project={project} />
           ))}

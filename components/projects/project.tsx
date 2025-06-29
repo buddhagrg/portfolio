@@ -16,8 +16,8 @@ export const Project = ({ project }: { project: ProjectMeta }) => {
   return (
     <Card key={project.title}>
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
-        <CardDescription className="text-base">
+        <CardTitle className="text-xl font-medium">{project.title}</CardTitle>
+        <CardDescription className="text-lg">
           {project.subtitle}
         </CardDescription>
       </CardHeader>

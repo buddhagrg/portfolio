@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FileText } from "lucide-react";
+import { MoveRight } from "lucide-react";
 
 import { Button } from "../ui/button";
 import { getAllArticles } from "@/utils";
@@ -11,30 +11,22 @@ export function Articles() {
   );
 
   return (
-    <section className="py-20" id="articles">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-          Recent Articles
-        </h1>
-        <p className="mb-10">
-          I enjoy sharing my knowledge and experiences through writing. Here are
-          some articles I&apos;ve published recently.
-        </p>
+    <section className="py-20">
+      <div className="max-w-3xl mx-auto">
+        <div className="flex items-center mb-5">
+          <h1 className="text-2xl font-bold">Articles</h1>
+          <Button className="ml-auto" variant="secondary" size="sm" asChild>
+            <Link href={`/articles`} className="space-x-1">
+              View All
+              <MoveRight className="size-6 md:size-5 lg:size-4" />
+            </Link>
+          </Button>
+        </div>
 
         <div className="grid grid-cols-1 gap-y-8">
           {articles.map((article) => (
             <Article key={article.title} article={article} />
           ))}
-        </div>
-
-        <div className="text-center mt-5">
-          <div>Want to read more of my articles?</div>
-          <Button className="mt-4" asChild>
-            <Link href={"/articles"} className="flex items-center">
-              <FileText className="size-6 md:size-5 lg:size-4" />
-              <span>View All Articles</span>
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

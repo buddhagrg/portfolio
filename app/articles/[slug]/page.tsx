@@ -47,7 +47,7 @@ export default async function Article({ params }: Props) {
 
   return (
     <SiteLayout>
-      <article className="max-w-4xl mx-auto pt-30 pb-20">
+      <article className="max-w-3xl mx-auto pt-10 pb-20">
         <Link
           href="/articles"
           className="flex mb-5 items-center gap-2 text-primary font-medium hover:text-primary/80"

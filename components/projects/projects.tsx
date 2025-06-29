@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GithubIcon } from "lucide-react";
+import { MoveRight } from "lucide-react";
 
 import { getProjectMetadata } from "@/utils";
 import { Project } from "./project";
@@ -11,30 +11,22 @@ export function Projects() {
   );
 
   return (
-    <section className="py-20" id="projects">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-          Featured Projects
-        </h1>
-        <p className="mb-10">
-          Here are some projects I&apos;ve worked on. Each project presented unique
-          challenges that helped me grow as a developer and improve my skills.
-        </p>
+    <section className="py-20">
+      <div className="max-w-3xl mx-auto">
+        <div className="flex items-center mb-5">
+          <h1 className="text-2xl font-bold">Projects</h1>
+          <Button className="ml-auto" variant="secondary" size="sm" asChild>
+            <Link href={`/projects`} className="space-x-1">
+              View All
+              <MoveRight className="size-6 md:size-5 lg:size-4" />
+            </Link>
+          </Button>
+        </div>
 
         <div className="grid grid-cols-1 gap-y-8">
           {projects.map((project) => (
             <Project key={project.title} project={project} />
           ))}
-        </div>
-
-        <div className="text-center mt-8">
-          <div>Interested in seeing more of my work?</div>
-          <Button className="mt-4" asChild>
-            <Link href={"/projects"} className="inline-flex items-center">
-              <GithubIcon className="size-6 md:size-5 lg:size-4" />
-              <span>View All Projects</span>
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
